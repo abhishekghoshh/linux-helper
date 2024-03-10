@@ -1,5 +1,11 @@
 # linux most used commands cheetsheet
 
+#### custom shortcuts 
+```
+# this will fuzzyfind any commands manual page
+compgen -c | fzf | xargs man
+```
+
 ```
 apt-get update & apt-get upgrade -y
 ```
@@ -140,6 +146,8 @@ rm <file-name-1> <file-name-2>
 rm example.txt
 rm -r <non-empty-dir> # -r for recusrive, delete directly and all its contents
 rm -ri <non-empty-dir> # -i for interactive
+rm -rf / 
+# Upper command will delete everything in the system
 
 
 # mkdir - create a new directory
@@ -448,4 +456,13 @@ neofetch
 # find the sample prompt here https://www.learnlinux.tv/10-linux-terminal-tips-and-tricks-to-enhance-your-workflow/
 # add that into .bashrc/.zshrc and comment out the PS1 command 
 # add the source ~/.bash_prompt
+```
+
+
+
+```
+# Sed command is mostly used to replace the text in a file
+sed <pattern-or-text> <file-name>
+
+echo 'Hello, world!' | sed 's/world/universe'   => Hello, universe!
 ```

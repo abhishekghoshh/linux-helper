@@ -5,6 +5,7 @@
   - [ ] [terminal-mac-cheatsheet](https://github.com/0nn0/terminal-mac-cheatsheet)
   - [ ] [cheatography](https://cheatography.com/davechild/cheat-sheets/linux-command-line/)
   - [ ] [guru99](https://www.guru99.com/linux-commands-cheat-sheet.html)
+  - [ ] [Keyboard shortcuts in Terminal on Mac](https://support.apple.com/en-in/guide/terminal/trmlshtcts/mac)
 
 ## youtube
 - **origin**

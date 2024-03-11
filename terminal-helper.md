@@ -5,17 +5,31 @@
 
 
 ```
-# kill active process
+# kill active process, stops the current in-progress command
+# Kill whatever you are running. Also clears everything on current line
 ctrl + c
 
-
-# clear your screen
-ctrl + l / cmd + k
+# Exit the current shell when no process is running, or send EOF to a the running process
+ctrl + d
 
 # minimize/suspend the current process and come back to the terminal, put process in background
 ctrl + z
 # reopen the background process
 fg
+
+
+# Up arrow shows previous commands
+
+
+# clear your screen
+ctrl + l / cmd + k
+
+
+
+
+# Tab automatically completes commands
+
+
 
 
 # set the cursor to the first letter/start in the command line, go to front of the line
@@ -30,50 +44,73 @@ ctrl + f
 # go backword one character
 ctrl + b 
 
-# jump forward by one word
-alt + f
+# Move cursor one word forward, jump forward by one word
+alt + f   /   Option + →
 
-# jump backward by one word
-alt + b 
+# Move cursor one word backward, jump backward by one word
+alt + b   /   Option + ←
 
 
-# to delete the line starting from the cursor position
-ctrl + k 
 
-# to delete a word starting from the current cursor position
-alt + d
+# Swap the last two characters before the cursor (not working in mac, it is showing a list of files as fuzzy finder)
+ctrl + t
 
-# delete the line in the command prompt
+# Swap the last two words before the cursor
+esc + t
+
+
+
+# Cut everything backwards to beginning of line, delete the line in the command prompt
 ctrl + u
 
 # to remove the word backwards from cursor position
 ctrl + w
 
+# Cut one word backwards using none alphabetic characters as delimiters
+esc + backspace
 
-# to paste text from the kill buffer
+# Cut everything forward to end of line, to delete the line starting from the cursor position
+ctrl + k 
+
+# to delete a word starting from the current cursor position
+alt + d
+
+# delete one character
+ctrl + h
+
+# Paste whatever was cut by the last cut command, to paste text from the kill buffer
 ctrl + y
 
-
-# to reverse search for commands you typed in the past from your history, search previous command like fuzzy finder
-ctrl + r
-
-
-# to forward search (works in ZSH for me but not bash)
-ctrl + s
-
-# execute previous command
-!!
-
-# execute previous command in sudo mode
-sudo !!
-
-# run previous matching command
-!<command-name>
-
-# open line in the editor
-ctrl + x then ctrl + e
+# Undo the last command. (Underscore. So it's actually Ctrl + Shift + minus)
+ctrl + _  (Ctrl + Shift + minus)
 
 
+
+
+
+
+
+#### zsh terminal specific
+
+# create a new tab zsh terminal 
+cmd + t
+
+# switch tab in zsh terminal
+ctrl + tab    /      ctrl + shift + tab
+cmd + left arraow  /   cmd + right arrow
+cmd + shift + [     /    cmd + shift + ]
+
+# split the window horizonatally in zsh terminal
+cmd + d
+
+# split the window vertically in zsh terminal
+cmd + shift + d
+
+switch between splitted tabs 
+cmd + [    /     cmd + ]
+
+# close the current tab in zsh terminal
+cmd + w
 ```
 
 
@@ -89,6 +126,41 @@ cheat() {
     curl "https://cheat.sh/$1"
 }
 # thn we can use like cheat rsync
+```
+
+
+#### Some of my custom created commands
+```
+
+alias bat='bat --paging=never'
+
+alias ls='lsd'
+
+# view files in preview with fuzzy finder
+alias fcat='fzf --preview "cat {}"'
+
+# view files with bat in preview with fuzzy finder
+fbat() {
+  local file
+  file=$(fzf --preview "bat --style=plain --color=always {}" --preview-window=right:50%:wrap)
+  if [[ -n $file ]]; then
+    bat --style=plain --color=always "$file"
+  fi
+}
+
+# cd with fuzzy finder
+cd_fzf() {
+  local dir
+  dir=$(find * -type d 2>/dev/null | fzf --preview 'ls -l {}' --height 40%)
+  [ -n "$dir" ] && cd "$dir"
+}
+alias fd=cd_fzf
+
+
+# single line push
+function push() {
+  git add . && git commit -m "$*" && git push
+}
 ```
 
 

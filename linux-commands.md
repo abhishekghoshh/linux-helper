@@ -1,15 +1,12 @@
 # linux most used commands cheetsheet
 
-#### custom shortcuts 
-```
-# this will fuzzyfind any commands manual page
-compgen -c | fzf | xargs man
-```
 
 ```
 apt-get update & apt-get upgrade -y
 ```
 
+
+#### User management commands of linux
 ```
 # sudo - execute a command as another user or with elevated privileges
 # Run command with the security privileges of the superuser (Super User DO)
@@ -33,13 +30,26 @@ useradd harry
 su <user-name>
 su john
 
+# to exit from a shell
 exit
 
 # passwd - change the password for a user
 sudo passwd <user-name>
 
+# To change the password of a user
+sudo passwd -l 'username'
+
+# To remove a newly created user
+sudo userdel -r 'username'
+
 # userdel - delete a user from the system
 userdel harry
+
+# To add a user to a group
+sudo usermod -a -G GROUPNAME USERNAME
+
+# To remove a user from a group
+sudo deluser USER GROUPNAME
 
 
 # finger - displays all the information about user
@@ -53,6 +63,8 @@ which vim
 
 where <command-name>
 whatis <command-name>
+
+# Find binary / source / manual for command
 whereis <command-name>
 ```
 
@@ -70,9 +82,44 @@ G
 h  -> to display help
 q  -> for quit
 
-man –k ifconfig  -> Search all man files for ifconfig
-man –k "copy files"   -> Search all man files for the sting in quotes
+# Search all man files for ifconfig
+man -k ifconfig
+
+# Search all man files for the sting in quotes
+man -k "copy files"
 ```
+
+
+#### Screen shortcut
+```
+# Start a screen session.
+screen
+
+# Resume a screen session.
+screen -r
+
+# Show your current screen sessions.
+screen -list
+
+# Activate commands for screen.
+CTRL-A
+
+# Create a new instance of terminal.
+CTRL-A c
+
+# Go to the next instance of terminal.
+CTRL-A n
+
+# Go to the previous instance of terminal.
+CTRL-A p
+
+# Show current instances of terminals.
+CTRL-A "
+
+# Rename the current instance.
+CTRL-A A
+```
+
 
 
 ```
@@ -103,9 +150,13 @@ ctrl + s
 
 # Execute the last command typed that starts with 'value'
 ![value]
+# Run last command starting with cd
+!cd
 
 # Print to the console the last command typed that starts with 'value'
 ![value]:p
+Print last command starting with cd
+!cd:p
 
 # execute previous command
 !!
@@ -117,6 +168,43 @@ ctrl + s
 sudo !!
 
 
+# Last argument of previous command
+!$
+
+# Last argument of previous command
+ALT-.
+
+# All arguments of previous command
+!*
+
+# Run previous command, replacing abc with 123
+^abc^123
+
+
+
+# Bash Variables
+
+# Show enviro­nment variables
+env
+
+# Output value of $NAME variable
+echo $NAME
+
+# Set $NAME to value, to set value of an environment variable
+export NAME=value
+
+# Executable search path
+$PATH
+
+# Home directory
+$HOME 
+~
+
+# Current shell
+$SHELL
+
+# Remove a variable
+unset
 
 
 
@@ -129,14 +217,40 @@ sudo !!
 # Run command B if A failed
 [command-a] || [command-b]
 
-# Run command A in background
+# Run command A in background, & is to run the command in background
 [command-a] &
 
 # Run command A and then pass the result to command B e.g ps auxwww | grep google
 [command-a] | [command-b]
 
+# stderr of cmd1 to cmd2
+[command-a] |& [command-b]
 
-# open line in the editor
+# Run cmd in a subshell
+cmd &
+
+
+
+# Offers help
+[command] -h
+
+# Offers help
+[command] --help
+
+# Offers help
+info [command]
+
+# Show the help manual for [command]
+man [command]
+
+# Gives a one-line description of [command]
+whatis [command]
+
+# Searches for command with keywords in description
+apropos [search-pattern]
+
+
+# open line in the editor to write a command
 ctrl + x then ctrl + e
 
 
@@ -157,7 +271,7 @@ ctrl -
 # ls - list the files and directories in the current directory
 ls
 
-# in a list format
+# in a list format, Long listing format
 ls -l
 ls -l <file-name>
 
@@ -175,6 +289,24 @@ ls -lh
 
 # Entire content of folder recursively
 ls -R
+
+# Entire content of folder recursively in reverse order
+ls -r
+
+# Sort by last modified
+ls -t
+
+# sort by file size
+ls -S
+
+# One file per line
+ls -1
+
+# comma separated output
+ls -m
+
+# Quoted output
+ls -Q
 
 # list files in /etc
 ls /etc
@@ -213,7 +345,7 @@ cd /
 cd -
 
 # Move 1 levels up
-cd ../
+cd ..
 
 
 
@@ -222,7 +354,7 @@ pushd <dir-name>
 popd <dir-name>
 
 
-# root directory and user directory marker
+# root directory marker(#) and user directory marker(/)
 
 # . respresent Current folder, e.g. ls .
 # .. resposent Parent/enclosing directory, e.g. ls ..
@@ -243,18 +375,31 @@ vim [file]
 
 # touch - create a new empty file or update the timestamp of an existing file
 touch <file-name>
-touch <file-name-1> <file-name-2>
-touch <file-name>{0..10}
-touch <already-existed-file> # do not update anything just change the modified timestamp
 touch shayan.txt
+
+# multiple files at one time
+touch <file-name-1> <file-name-2>
+
+# create 10 files in a single go
+touch <file-name>{0..10}
+
+# do not update anything just change the modified timestamp
+touch <already-existed-file>
+
+
+
 
 
 # echo - display text or variables to the console
 echo "hello world"
+
 # single arrow (>) will override the content
 echo "hello world" > test.txt
+
 # double arrow (>>) will append the content
 echo "hello world" >> test.txt
+
+
 
 
 truncate -s 0 <file-name>
@@ -286,7 +431,7 @@ mkdir <dir-name>
 # Create a new directory called test
 mkdir test
 
-# -p will create all the nested folders if that is not present already 
+# -p will create all the nested folders if that is not present already, 
 mkdir -p /dir1/dir2/dir3
 
 # Make directory and subdirectory in a single command
@@ -295,7 +440,10 @@ mkdir -p test2/test2
 #  Make multiple directories
 mkdir test2 test3 
 
-# rmdir - remove a directory
+
+
+
+# rmdir - Remove directory ( only operates on empty directories )
 rmdir <dir-name>
 
 # Deletes the text.txt file in the directory called test
@@ -316,8 +464,9 @@ cp -r <dir-1> <dir-1-copy>
 
 # mv - move or rename files or directories, Move/Rename, e.g. mv file1.ad /tmp
 mv <file-name> <file-name-with-path>
-mv <file-name> <new-file-name>
-mv [file] [new filename]
+
+# Renames the file to a new filename
+mv [file] [new-filename]
 mv example.txt backup/
 
 # Moves text.txt to a different directory
@@ -330,6 +479,23 @@ mv *.txt test/
 
 # List all files and subfolders and files within subfolders within the test directory
 tree /etc
+
+
+
+# Divides the file into x columns
+pr -x
+
+# Assigns a header to the file
+pr -h
+
+# Denotes the file with Line Numbers
+pr -n
+
+# Prints "c" copies of the File
+lp -nc , lpr c
+
+# Specifies name of the printer
+lp-d lp-P
 ```
 
 ```
@@ -338,6 +504,10 @@ cat <file-name>
 cat <file-name> | sort
 cat example.txt
 cat <file-1> <file-2> <file-3>
+
+# Joins two files (file1, file2) and stores the output in a new file (file3)
+cat file1 file2 > file3
+
 cat <file-1> <file-2> <file-3> > <file-name>
 
 
@@ -377,8 +547,11 @@ uniq file.txt
 # banana
 
 
-
+# Output file content delivered in screensize chunks
 less <file-name>
+
+# Get type of file1
+file <file-1>
 
 
 # head/tail - display the first/last few lines of a file or input
@@ -387,12 +560,21 @@ less <file-name>
 head <file-name>
 head -f <file-name>
 head file.txt
-head cloud-init.log  -> Displays the first 10 lines of the file
-head -n 5 cloud-init.log  -> Displays the first 5 lines of the file
+
+# Displays the first 10 lines of the file
+head cloud-init.log
+
+# Displays the first 5 lines of the file
+head -n 5 cloud-init.log
+
+# Show distri­bution
+head -n1 /etc/issue
 
 
 # display last 10 lines
 tail <file-name>
+
+# Output last lines of file1 as it changes, follow the file
 tail -f <file-name>
 
 
@@ -400,24 +582,112 @@ cmp <file-name-1> <file-name-2>
 
 # Compares the two text files
 diff <file-name-1> <file-name-2>
+
+
+
+```
+
+
+#### IO Redire­ction
+```
+# Tell command to read content from a file, Input of cmd from file
+[command] < [file]
+
+# Output of cmd2 as file input to cmd1
+cmd1 <(cmd2)
+
+# Push output to file, keep in mind it will get overwritten, Standard output (stdout) of cmd to file
+[command] > [file]
+
+# Append output to existing file, Append stdout to file
+[command] >> [file]
+
+# Discard stdout of cmd
+cmd > /dev/null
+
+# Error output (stderr) of cmd to file
+cmd 2> file
+
+# stdout to same place as stderr
+cmd 1>&2
+
+# stderr to same place as stdout
+cmd 2>&1
+
+# Every output of cmd to file
+cmd &> file
 ```
 
 
 ```
 # find the files in a directory
 find <dir-name> -name <name-of-file>
+find /Users -name "file.txt"
 find <other-parameters>
+
+# Find files starting with name in dir
+find /dir/ -name name*
+
+# Find files owned by name in dir
+find /dir/ -user name
+
 # Searches within /var and subdirectories
 find /var -name *.log
 
-# locate - locate any file on the system
+# Find files modifed less than num minutes ago in dir
+find /dir/ -mmin num
+
+# locate - locate any file on the system, Find file (quick search of system index)
 locate file.txt
-locate cloud-init.log  -> Displays directory containing cloud-init.log
-locate -I cloud-init.log  -> Displays directory containing cloud-init.log and ignores cas
+
+# Displays directory containing cloud-init.log
+locate cloud-init.log
+
+# Displays directory containing cloud-init.log and ignores cas
+locate -I cloud-init.log
+
+
+
+
+
+
+
+# Search for all lines that contain the pattern,
+grep [search_pattern] [files]
+grep "Tom" file.txt
+
+# Search for all lines that contain the case-insensitive pattern
+grep -i [search_pattern] [file]
+
+# Recursively search in all files in specified directory for all lines that contain the pattern
+grep -r [search_pattern] [dir]
+
+# Search for all lines that do NOT contain the pattern, Inverted search
+grep -v [search_pattern] [file]
+
+# Search for all lines that do NOT contain the pattern
+grep -v [search_pattern] [file]
+
+# Show matched part of file only
+grep -o [search_pattern] [file]
+
+
+
+
+
+
+
+# Spotlight search for files (names, content, other metadata),
+mdfind [search_pattern]
+mdfind skateboard
+
+# Spotlight search for files named like pattern in the given directory
+mdfind -onlyin [dir] -name [pattern]
 ```
 
+
+#### file permissions
 ```
-# file permissions
 # The first digit represents the owner of the file/directory
 # The second digit represents the group that the file/directory belongs to
 # The third digit represents all other users
@@ -430,13 +700,33 @@ locate -I cloud-init.log  -> Displays directory containing cloud-init.log and ig
 # 6 (read and write)
 # 7 (read, write, and execute)
 
+# r for read permission
+# w for write permission
+# x for execute permission
+# -= for no permission
+
 # chmod - change the permissions of a file or directory
 chmod <file-name> <file-mod>
 chmod +x <file-name>
 chmod 700 file.txt
 
+# Change mode of file to 775
+chmod 775 file
+
+# Recurs­ively chmod folder to 600
+chmod -R 600 folder
+
+
+
 # chown - change the owner of a file or directory
 chown <user-name> <file-name>
+
+# Change file owner to user and group to group
+chown user:group file
+
+# change the user as well as group for a file or directory
+chown user:group filename
+
 chown new_owner example.txt
 ```
 
@@ -457,6 +747,21 @@ ssh username@ip-address
 
 # scp - securely copy files between systems
 scp myfile.txt user@remotehost:/home/user/
+
+# Display files in the current directory of a remote computer
+dir
+
+# change directory to "dirname" on a remote computer
+cd "dirname"
+
+# upload 'file' from local to remote computer
+put file
+
+# Download 'file' from remote to local computer
+get file
+
+# Logout
+quit
 ```
 
 ```
@@ -468,7 +773,9 @@ resolvectl status
 # ping - test network connectivity, Test the destination at 8.8.8.8 by sending ICMP packets
 ping <ip-address>
 ping 8.8.8.8
-ping -c 5 8.8.8.8    ->   # Test the destination at 8.8.8.8 by sending five ICMP packets
+
+# Test the destination at 8.8.8.8 by sending five ICMP packets
+ping -c 5 8.8.8.8
 
 
 
@@ -478,8 +785,12 @@ traceroute <url>
 # netstat - display network connection information
 netstat
 netstat -tulpn
-netstat -r   ->  Display the route table
-netstat -np | grep "80"   -> isplay open connections for a specific port
+
+#  Display the route table
+netstat -r
+
+# isplay open connections for a specific port
+netstat -np | grep "80"
 
 ss 
 ss -tulpn
@@ -505,11 +816,14 @@ curl <downloadable-url> > <file-name>
 # uname - display system information
 uname
 uname -r
+
+# Show system and kernel
 uname -a
 ```
 
 
 ```
+# Gives free RAM on your system
 free
 ```
 
@@ -522,6 +836,7 @@ df -H
 du
 
 # mount - mount a file system
+# Show mounted filesy­stems
 mount
 mount | column -t
 sudo mount /dev/sdb1 /mnt/usb
@@ -530,14 +845,31 @@ sudo mount /dev/sdb1 /mnt/usb
 sudo umount /mnt/usb
 ```
 
+#### Process command
 ```
 # ps - display information about running processes
+# Show snapshot of processes
 ps
 ps aux
 
+# Gives the status of a particular process
+ps PID
+
+# Gives the Process ID (PID) of a process
+pidof
+
+
+# Starts a process with a given priority
+nice
+
+# Changes priority of an already running process
+renice
+
 
 # top - display system resource usage and processes, Displays active processes. Press q to quit
+# Show real time processes
 top
+
 # htop - an interactive process viewer and system monitor in a human readable format
 htop
 
@@ -552,26 +884,17 @@ kill -15 <process-id>
 # -l to list all the flags
 kill -l
 
-killall
+# Kill process with name name
+pkill <process-name>
 
+# Kill process with name name with forcefully
 pkill -f <process-name>
+
+# Kill all processes with names beginning name
+killall
 ```
 
 
-
-```
-job
-ctrl + z
-
-
-bg
-
-fg
-
-# & is to run the command in background
-<command-name> &
-
-```
 ```
 # tar create or extract compressed archive files
 # x: extract files from an archive
@@ -653,12 +976,21 @@ echo 'Hello, world!' | sed 's/world/universe'   => Hello, universe!
 # search in a text or file
 # Displays any lines of the file ssh_config that include the term user
 grep user /etc/ssh/ssh_config
+
 # Use quotes if the string has spaces, -i option: Ignore upper/lower case
 grep -i "COMMAND LINE" /etc/ssh/ssh_config
-grep -R 127.0.0.1 /etc/  -> Search all files in the etc directory
-grep user /etc/ssh/ssh_config > sample.txt  -> Sends search results to a text file
+
+# Search all files in the etc directory
+grep -R 127.0.0.1 /etc/
+
+# Sends search results to a text file
+grep user /etc/ssh/ssh_config > sample.txt
 ls | grep crontab
 
+
+
+# run in every 2 second
+watch <command-name>
 
 awk
 

@@ -18,6 +18,7 @@
   - [ ] [The mind behind Linux | Linus Torvalds | TED](https://www.youtube.com/watch?v=o8NPllzkFhE)
 - **introduction**
   - [ ] [The 5 Things That Taught Me The Most About Linux](https://www.youtube.com/watch?v=bdr_RvmOpkQ)
+  - [ ] [5 Common Mistakes New Linux Users Often Make](https://www.youtube.com/watch?v=nY9dVJ2EnSk)
   - [ ] [New Linux User: 10 Things I Wish I Knew When I First Started](https://www.youtube.com/watch?v=HIJ6LixbcAY)
   - [ ] [10 Typical Linux Problems and How to Fix Them](https://www.youtube.com/watch?v=xsdFNpThetE)
   - [ ] [Why Linux Is Better For Programming](https://www.youtube.com/watch?v=otDOHt_Jges)

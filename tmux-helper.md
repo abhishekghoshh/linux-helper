@@ -2,6 +2,7 @@
 
 
 ### Tmux configuration
+- [Tmux is more than just a splitting terminal](https://www.youtube.com/watch?v=MLDmM_zRl40)
 - [Tmux has forever changed the way I write code.](https://www.youtube.com/watch?v=DzNmUNvnB04)
 - [TMUX and Terminal configuration](https://www.youtube.com/playlist?list=PLsz00TDipIfct4F3pHv6_uI9OyjphQEGZ)
 - [I made the greatest tool ever! | tmux & cht.sh & fzf](https://www.youtube.com/watch?v=hJzqEAf2U4I)
@@ -14,3 +15,8 @@
 - [Learn tmux](https://www.youtube.com/playlist?list=PLT98CRl2KxKGiyV1u6wHDV8VwcQdzfuKe)
 - [Tmux Tutorial for Beginners](https://www.youtube.com/watch?v=U41BTVZLKB0)
 - [Tmux From Scratch To BEAST MODE](https://www.youtube.com/watch?v=GH3kpsbbERo)
+
+
+
+### Tmux tutorial series
+- [Tmux for Newbs. FREE TMUX COURSE](https://www.youtube.com/playlist?list=PLsz00TDipIfdrJDjpULKY7mQlIFi4HjdR)

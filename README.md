@@ -16,6 +16,8 @@
   - [ ] [The Making of Linux: The World's First Open-Source Operating System](https://www.youtube.com/watch?v=E0Q9KnYSVLc)
   - [ ] [Linux: The Origin Story](https://www.youtube.com/watch?v=s7u7jBwIocU)
   - [ ] [The mind behind Linux | Linus Torvalds | TED](https://www.youtube.com/watch?v=o8NPllzkFhE)
+  - [ ] [Even Microsoft Uses Linux, So Why Don't We??](https://www.youtube.com/watch?v=l5a9jEtP-vg)
+
 - **introduction**
   - [ ] [The 5 Things That Taught Me The Most About Linux](https://www.youtube.com/watch?v=bdr_RvmOpkQ)
   - [ ] [5 Common Mistakes New Linux Users Often Make](https://www.youtube.com/watch?v=nY9dVJ2EnSk)
@@ -26,6 +28,7 @@
   - [ ] [Why I Code on Linux Instead of Windows](https://www.youtube.com/watch?v=HrYtwz0Xe2Q)
   - [ ] [10 ways Linux is just better!](https://www.youtube.com/watch?v=mAFMJ1LnQu8)
   - [ ] [10 Things I Wish I Knew When I First Started With Linux](https://www.youtube.com/watch?v=HIJ6LixbcAY)
+
 - **freecodecamp series**
   - [ ] [Linux Operating System - Crash Course for Beginners](https://www.youtube.com/watch?v=ROjZy1WbCIA)
   - [ ] [The 50 Most Popular Linux & Terminal Commands - Full Course for Beginners](https://www.youtube.com/watch?v=ZtqBQ68cfJc)
@@ -37,6 +40,7 @@
    
 - **terminal commands**
   - [ ] [Become a shell wizard in ~12 mins](https://www.youtube.com/watch?v=IYZDIhfAUM0)
+  - [ ] [Unleash the Power of These 6 Linux Commands - Say Goodbye to Boring Terminal Screens](https://www.youtube.com/watch?v=51DH87ecfF8)
   - [ ] [Linux commands : Clear your Linux Basics in 25 min for beginners](https://www.youtube.com/watch?v=BGjTboXjH28)
   - [ ] [18 Commands That Will Change The Way You Use Linux Forever](https://www.youtube.com/watch?v=AVXYq8aL47Q)
   - [ ] [60 Linux Commands you NEED to know (in 10 minutes)](https://www.youtube.com/watch?v=gd7BXuUQ91w)
@@ -70,8 +74,8 @@
   - [ ] [Top Docs | Learn the Basics](https://www.youtube.com/playlist?list=PLTnRtjQN5iebLpaJpCuuzVqXyPI_h5x_t)
   
 
-
-
+- **command line tools for improving productivity**
+  - [ ] [5 Command Line Tools That Boost Developer Productivity (2023)](https://www.youtube.com/watch?v=6ivti-DfZng)
 
 ## Udemy
 - **introduction**

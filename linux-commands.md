@@ -24,26 +24,19 @@ groups
 # useradd - add a new user to the system
 sudo useradd <user-name>
 sudo adduser <user-name> <other-parameters>
-useradd harry
-
-# su - switch user to become another user
-su <user-name>
-su john
-
-# to exit from a shell
-exit
+sudo useradd harry
 
 # passwd - change the password for a user
 sudo passwd <user-name>
 
 # To change the password of a user
-sudo passwd -l 'username'
+sudo passwd -l <user-name>
 
 # To remove a newly created user
-sudo userdel -r 'username'
+sudo userdel -r <user-name>
 
 # userdel - delete a user from the system
-userdel harry
+sudo userdel harry
 
 # To add a user to a group
 sudo usermod -a -G GROUPNAME USERNAME
@@ -51,12 +44,26 @@ sudo usermod -a -G GROUPNAME USERNAME
 # To remove a user from a group
 sudo deluser USER GROUPNAME
 
+# su - switch user to become another user
+su <user-name>
+su john
+
 
 # finger - displays all the information about user
 apt-get install finger
+
+# Shows information of all the users logged in
+finger
+
+# Gives information of a particular user
 finger <user-name>
 
+# to exit from a logged in shell
+exit
+```
 
+#### Information about a program
+```
 # which - locate a program or command in the system path
 which <command-name>
 which vim
@@ -66,6 +73,8 @@ whatis <command-name>
 
 # Find binary / source / manual for command
 whereis <command-name>
+
+
 ```
 
 ```
@@ -189,6 +198,12 @@ env
 
 # Output value of $NAME variable
 echo $NAME
+
+# Create a new variable
+VARIABLE_NAME= value
+
+# Remove a variable
+unset
 
 # Set $NAME to value, to set value of an environment variable
 export NAME=value
@@ -505,6 +520,9 @@ cat <file-name> | sort
 cat example.txt
 cat <file-1> <file-2> <file-3>
 
+# Creates a new file
+cat > filename
+
 # Joins two files (file1, file2) and stores the output in a new file (file3)
 cat file1 file2 > file3
 
@@ -764,6 +782,9 @@ get file
 quit
 ```
 
+
+
+Networking command
 ```
 # for dns
 cat /etc/resolv.conf
@@ -854,6 +875,12 @@ ps aux
 
 # Gives the status of a particular process
 ps PID
+
+# To send a process to the background
+bg
+
+# To run a stopped process in the foreground
+fg
 
 # Gives the Process ID (PID) of a process
 pidof

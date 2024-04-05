@@ -9,51 +9,53 @@ docker run -it --rm -v $(pwd):/mnt busybox vi /mnt/vim-motion-practice.txt
 
 - **Vim mostions**
   - **blogs**
-	- [ ] [shortcutfoo](https://www.shortcutfoo.com/app/dojos/neovim/cheatsheet)
-	- [ ] [devhints](https://devhints.io/vim)
-	- [ ] [Vim Cheat Sheet](https://vim.rtorr.com/)
+  	- [shortcutfoo](https://www.shortcutfoo.com/app/dojos/neovim/cheatsheet)
+  	- [devhints](https://devhints.io/vim)
+  	- [Vim Cheat Sheet](https://vim.rtorr.com/)
   - **youtube**
-    - [ ] [Vim Motions for absolute beginners!!!](https://www.youtube.com/watch?v=lWTzqPfy1gE)
-      - [ ] [Intermediate Vim Motions and Pro Tips!!!](https://www.youtube.com/watch?v=nBjEzQlJLHE)
-    - [ ] [Vim As Your Editor](https://www.youtube.com/playlist?list=PLm323Lc7iSW_wuxqmKx_xxNtJC_hJbQ7R)
-    - [ ] [Vim Tutorial for Beginners](https://www.youtube.com/watch?v=RZ4p-saaQkc)
+    - [Vim Motions for absolute beginners!!!](https://www.youtube.com/watch?v=lWTzqPfy1gE)
+      - [Intermediate Vim Motions and Pro Tips!!!](https://www.youtube.com/watch?v=nBjEzQlJLHE)
+    - [Vim Tips I Wish I Knew Earlier](https://www.youtube.com/watch?v=5BU2gBOe9RU)
+      - [10 Advanced Vim Features (You Probably Didn't Know)](https://www.youtube.com/watch?v=gccGjwTZA7k)
+    - [Vim As Your Editor](https://www.youtube.com/playlist?list=PLm323Lc7iSW_wuxqmKx_xxNtJC_hJbQ7R)
+    - [Vim Tutorial for Beginners](https://www.youtube.com/watch?v=RZ4p-saaQkc)
   
 
-- **vim introduction**
-  - [ ] [PDE: A different take on editing code](https://www.youtube.com/watch?v=QMVIJhC9Veg)
-  - [ ] [Effective Neovim: Instant IDE](https://www.youtube.com/watch?v=stqUbv-5u2s)
-  	- [ ] [kickstart.nvim](https://github.com/nvim-lua/kickstart.nvim)
-  	- [ ] [The Only Video You Need to Get Started with Neovim](https://www.youtube.com/watch?v=m8C0Cq9Uv9o)
-  - [ ] [Why Neovim nerds are so obsessed with the terminal](https://www.youtube.com/watch?v=5wy2iLU5fs0)
-  - [ ] [How to ACTUALLY switch from VS Code to Neovim](https://www.youtube.com/watch?v=aCgDs8Nv-jo)
-  - [ ] [Why I Switched From NEOVIM To VSCODE](https://www.youtube.com/watch?v=U1Mg8E70S6g)
-  - [ ] [Is This Vim Distribution Superior to VS Code?](https://www.youtube.com/watch?v=nQ2nvTD_46A)
+- **neovim introduction**
+  - [PDE: A different take on editing code](https://www.youtube.com/watch?v=QMVIJhC9Veg)
+  - [Effective Neovim: Instant IDE](https://www.youtube.com/watch?v=stqUbv-5u2s)
+  	- [kickstart.nvim](https://github.com/nvim-lua/kickstart.nvim)
+  	- [The Only Video You Need to Get Started with Neovim](https://www.youtube.com/watch?v=m8C0Cq9Uv9o)
+  - [Why Neovim nerds are so obsessed with the terminal](https://www.youtube.com/watch?v=5wy2iLU5fs0)
+  - [How to ACTUALLY switch from VS Code to Neovim](https://www.youtube.com/watch?v=aCgDs8Nv-jo)
+  - [Why I Switched From NEOVIM To VSCODE](https://www.youtube.com/watch?v=U1Mg8E70S6g)
+  - [Is This Vim Distribution Superior to VS Code?](https://www.youtube.com/watch?v=nQ2nvTD_46A)
   
 - **all neovim configuration**
-    - [ ] [Learn Neovim The Practical Way](https://alpha2phi.medium.com/learn-neovim-the-practical-way-8818fcf4830f#545a)
+    - [Learn Neovim The Practical Way](https://alpha2phi.medium.com/learn-neovim-the-practical-way-8818fcf4830f#545a)
 
 - **Neovim tutorial series** 
-	- [ ] [Neovim from Scratch](https://www.youtube.com/playlist?list=PLhoH5vyxr6Qq41NFL4GvhFp-WLd5xzIzZ)
-	- [ ] [Neovim for Newbs. FREE NEOVIM COURSE](https://www.youtube.com/playlist?list=PLsz00TDipIffreIaUNk64KxTIkQaGguqn)
-	- [ ] [Neovim Configuration](https://www.youtube.com/playlist?list=PLsz00TDipIffxsNXSkskknolKShdbcALR)
-	- [ ] [Beginner Vim](https://www.youtube.com/playlist?list=PLmTrCsxAaghUhCmSiX5Py-e9O8UOPX502)
-	- [ ] [Coding With Vim](https://www.youtube.com/playlist?list=PLmTrCsxAaghW9KWrzuc6n2B9ud2uV5sjK)
-	- [ ] [Bash2Basics](https://www.youtube.com/playlist?list=PLep05UYkc6wTWlugE_9Lj6JlLpvSBbkZ_)
-	- [ ] [Make a Simple Vim/Neovim Plugin from Scratch: cyclist.vim](https://www.youtube.com/watch?v=apyV4v7x33o&list=PLep05UYkc6wSgBFseCsRBSQQ1Fmf3eRa8)
+	- [Neovim from Scratch](https://www.youtube.com/playlist?list=PLhoH5vyxr6Qq41NFL4GvhFp-WLd5xzIzZ)
+	- [Neovim for Newbs. FREE NEOVIM COURSE](https://www.youtube.com/playlist?list=PLsz00TDipIffreIaUNk64KxTIkQaGguqn)
+	- [Neovim Configuration](https://www.youtube.com/playlist?list=PLsz00TDipIffxsNXSkskknolKShdbcALR)
+	- [Beginner Vim](https://www.youtube.com/playlist?list=PLmTrCsxAaghUhCmSiX5Py-e9O8UOPX502)
+	- [Coding With Vim](https://www.youtube.com/playlist?list=PLmTrCsxAaghW9KWrzuc6n2B9ud2uV5sjK)
+	- [Bash2Basics](https://www.youtube.com/playlist?list=PLep05UYkc6wTWlugE_9Lj6JlLpvSBbkZ_)
+	- [Make a Simple Vim/Neovim Plugin from Scratch: cyclist.vim](https://www.youtube.com/watch?v=apyV4v7x33o&list=PLep05UYkc6wSgBFseCsRBSQQ1Fmf3eRa8)
 
 - **Neovim Customization**
-	- [ ] [The perfect Neovim setup for Go](https://www.youtube.com/watch?v=i04sSQjd-qo)
-	- [ ] [The perfect Neovim setup for Rust.](https://www.youtube.com/watch?v=mh_EJhH49Ms)
-	- [ ] [Setting up Neovim for Java Development](https://www.youtube.com/watch?v=8q_VPqA-KLs)
-	- [ ] [Effective Neovim setup for web development towards 2024](https://www.youtube.com/watch?v=fFHlfbKVi30)
-	- [ ] [Automatically Execute *Anything* in Nvim](https://www.youtube.com/watch?v=9gUatBHuXE0)
-	- [ ] [Execute **anything** in neovim (now customizable)](https://www.youtube.com/watch?v=HlfjpstqXwE)
-	- [ ] [Neovim - Github Copilot | Setup & Demo | Copilot Creates a Simple Game By Itself | Official Plugin](https://www.youtube.com/watch?v=eMnZBaOs4vM&list=PLhoH5vyxr6Qo_5IoxqcQjHgBe77xD5-BP)
-	- [ ] [Better than Copilot? This AI plugin for Neovim is Incredible](https://www.youtube.com/watch?v=7k0KZsheLP4)
+	- [The perfect Neovim setup for Go](https://www.youtube.com/watch?v=i04sSQjd-qo)
+	- [The perfect Neovim setup for Rust.](https://www.youtube.com/watch?v=mh_EJhH49Ms)
+	- [Setting up Neovim for Java Development](https://www.youtube.com/watch?v=8q_VPqA-KLs)
+	- [Effective Neovim setup for web development towards 2024](https://www.youtube.com/watch?v=fFHlfbKVi30)
+	- [Automatically Execute *Anything* in Nvim](https://www.youtube.com/watch?v=9gUatBHuXE0)
+	- [Execute **anything** in neovim (now customizable)](https://www.youtube.com/watch?v=HlfjpstqXwE)
+	- [Neovim - Github Copilot | Setup & Demo | Copilot Creates a Simple Game By Itself | Official Plugin](https://www.youtube.com/watch?v=eMnZBaOs4vM&list=PLhoH5vyxr6Qo_5IoxqcQjHgBe77xD5-BP)
+	- [Better than Copilot? This AI plugin for Neovim is Incredible](https://www.youtube.com/watch?v=7k0KZsheLP4)
 
 - **Advance topics**
-	- [ ] [TakeTuesday E03: Introduction to LuaSnip](https://www.youtube.com/watch?v=Dn800rlPIho)
-	- [ ] [Why Vim Experts Do THIS Instead of Using Tabs...](https://www.youtube.com/watch?v=ST_DZ6yIiXY)
+	- [TakeTuesday E03: Introduction to LuaSnip](https://www.youtube.com/watch?v=Dn800rlPIho)
+	- [Why Vim Experts Do THIS Instead of Using Tabs...](https://www.youtube.com/watch?v=ST_DZ6yIiXY)
 
 
 #### Install neovim with lua-jit
@@ -69,10 +71,10 @@ source ~/.zshrc
 ```
 
 ### Neovim chad
-- [ ] [Turn VIM into a full featured IDE with only one command](https://www.youtube.com/watch?v=Mtgo-nP_r8Y)
-- [ ] [NeoVim with NVChad | The most beautiful editor for programming.](https://www.youtube.com/watch?v=Irm2WELYSps)
-- [ ] [Official documentation](https://nvchad.com/docs/quickstart/install)
-- [ ] [nvchad github](https://github.com/NvChad/NvChad)
+- [Turn VIM into a full featured IDE with only one command](https://www.youtube.com/watch?v=Mtgo-nP_r8Y)
+- [NeoVim with NVChad | The most beautiful editor for programming.](https://www.youtube.com/watch?v=Irm2WELYSps)
+- [Official documentation](https://nvchad.com/docs/quickstart/install)
+- [nvchad github](https://github.com/NvChad/NvChad)
 - configs present in `~/.config/nvim/lua/custom`
 
 - **Shortcuts**

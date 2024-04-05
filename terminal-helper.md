@@ -93,33 +93,12 @@ ctrl + y
 ctrl + _  (Ctrl + Shift + minus)
 
 
-
-
-
-
-
-#### zsh terminal specific
-
-# create a new tab zsh terminal 
-cmd + t
-
-# switch tab in zsh terminal
-ctrl + tab    /      ctrl + shift + tab
-cmd + left arraow  /   cmd + right arrow
-cmd + shift + [     /    cmd + shift + ]
-
-# split the window horizonatally in zsh terminal
-cmd + d
-
-# split the window vertically in zsh terminal
-cmd + shift + d
-
-switch between splitted tabs 
-cmd + [    /     cmd + ]
-
-# close the current tab in zsh terminal
-cmd + w
 ```
+
+
+
+
+
 
 
 - **mac**
@@ -132,9 +111,3 @@ cmd + w
 - **windows**
   - [Make Windows Terminal look amazing!](https://www.youtube.com/watch?v=AK2JE2YsKto)
   - [Make Windows Terminal Look Better | Oh My Posh Guide](https://www.youtube.com/watch?v=-G6GbXGo4wo)
-
-
-```
-
-
-```

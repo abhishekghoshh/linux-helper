@@ -12,6 +12,7 @@ docker run -it --rm -v $(pwd):/mnt busybox vi /mnt/vim-motion-practice.txt
   	- [shortcutfoo](https://www.shortcutfoo.com/app/dojos/neovim/cheatsheet)
   	- [devhints](https://devhints.io/vim)
   	- [Vim Cheat Sheet](https://vim.rtorr.com/)
+  	- [warp.dev](https://www.warp.dev/topic/vim)
   - **youtube**
     - [Vim Motions for absolute beginners!!!](https://www.youtube.com/watch?v=lWTzqPfy1gE)
       - [Intermediate Vim Motions and Pro Tips!!!](https://www.youtube.com/watch?v=nBjEzQlJLHE)
@@ -78,7 +79,6 @@ source ~/.zshrc
 - configs present in `~/.config/nvim/lua/custom`
 
 - **Shortcuts**
-  - [cheetsheet image](https://www.reddit.com/media?url=https%3A%2F%2Fpreview.redd.it%2Fnvchad-cheatsheet-v0-59pmxg6dumua1.png%3Fwidth%3D2520%26format%3Dpng%26auto%3Dwebp%26s%3D5dc1b33cf4244851a43d912856b676c3e36f0b6c)
   - space + c + h for cheetsheet opening and closing
   - Space -> t -> h (setting themes) [option + control + p/n ]
   - Syntax highlighting [TSInstall #laungage_name] [TSInstallInfo]
@@ -99,6 +99,8 @@ source ~/.zshrc
       - ctrl-x then ctrl-ww
   - fuzzy finder
     - <leader>/space + ff
+  - Install all packages with mason
+    - :MasonInstallAll
 
 
 
@@ -119,7 +121,6 @@ source ~/.zshrc
    3.**To append a text for the next lines** : (ctrl + v) then press (shift + 4) or $ to selct to the end of the line then use 10 j to select next 10 lines and then (shift + A) to Append and type your changes and press ESC to apply your changes for the next 10 lines.
 5. Sometime when we are selecting lines and we forgot the first line then we can use (ctrl + o) which will change the direction of the selecting and select the first line
 6. % to go to starting or ending of the parenthesis. We can use it to select the entire content inside those parenthesis, or also we can go to the function
-
 
 
 (shift + j) => remove empty lines and append the start of the next line to the end of the current line 
@@ -221,3 +222,7 @@ S
 ~
 
 ```
+
+
+
+# Golang shortcuts

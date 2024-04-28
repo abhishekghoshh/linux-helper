@@ -193,7 +193,7 @@ ALT-.
 
 # Bash Variables
 
-# Show enviro­nment variables
+# Show environment variables
 env
 
 # Output value of $NAME variable
@@ -606,7 +606,7 @@ diff <file-name-1> <file-name-2>
 ```
 
 
-#### IO Redire­ction
+#### IO Redirection
 ```
 # Tell command to read content from a file, Input of cmd from file
 [command] < [file]
@@ -731,7 +731,7 @@ chmod 700 file.txt
 # Change mode of file to 775
 chmod 775 file
 
-# Recurs­ively chmod folder to 600
+# Recursively chmod folder to 600
 chmod -R 600 folder
 
 
@@ -857,7 +857,7 @@ df -H
 du
 
 # mount - mount a file system
-# Show mounted filesy­stems
+# Show mounted filesystems
 mount
 mount | column -t
 sudo mount /dev/sdb1 /mnt/usb

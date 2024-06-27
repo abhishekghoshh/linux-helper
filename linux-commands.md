@@ -10,10 +10,14 @@ apt-get update & apt-get upgrade -y
 ```
 # sudo - execute a command as another user or with elevated privileges
 # Run command with the security privileges of the superuser (Super User DO)
+# Execute a command as another user, typically the superuser.
 sudo
 
 # whoami - display the current user name
 whoami
+
+# Display who is logged in
+who 
 
 # Show the user you are logged in as and the groups you are part of
 id
@@ -21,7 +25,7 @@ id
 # Show the groups you are part of
 groups
 
-# useradd - add a new user to the system
+# useradd - add a new user to the system, Create a new user account
 sudo useradd <user-name>
 sudo adduser <user-name> <other-parameters>
 sudo useradd harry
@@ -38,13 +42,14 @@ sudo userdel -r <user-name>
 # userdel - delete a user from the system
 sudo userdel harry
 
-# To add a user to a group
+# To add a user to a group, Modify user account properties
 sudo usermod -a -G GROUPNAME USERNAME
 
 # To remove a user from a group
 sudo deluser USER GROUPNAME
 
-# su - switch user to become another user
+# su - switch user to become another user, 
+# Substitute user identity to become superuser or another user.
 su <user-name>
 su john
 
@@ -750,6 +755,9 @@ chown new_owner example.txt
 
 
 ```
+# Print or set system name.
+hostname
+
 # ifconfig - display or configure network interfaces, Display all network interfaces
 ifconfig
 
@@ -760,7 +768,7 @@ ip address | grep eth0 | grep inet | awk '{print $2}
 ```
 
 ```
-# ssh - connect to a remote server securely
+# ssh - connect to a remote server securely, Secure Shell client for remote login.
 ssh username@ip-address
 
 # scp - securely copy files between systems
@@ -799,11 +807,12 @@ ping 8.8.8.8
 ping -c 5 8.8.8.8
 
 
-
+# Print the route packets take to network host.
 traceroute <url>
 
 
 # netstat - display network connection information
+# Print network connections, routing tables, interface statistics, masquerade connections, and multicast memberships.
 netstat
 netstat -tulpn
 
@@ -818,6 +827,7 @@ ss -tulpn
 
 
 # route - view or configure network routing tables
+# Show or manipulate the IP routing table.
 route [options] [add/delete/show]
 
 
@@ -856,6 +866,9 @@ df -H
 # du - display disk usage by file or directory
 du
 
+# Display file or file system status
+stat
+
 # mount - mount a file system
 # Show mounted filesystems
 mount
@@ -881,6 +894,12 @@ bg
 
 # To run a stopped process in the foreground
 fg
+
+# Display current jobs
+jobs
+
+# Run a command immune to hangups.
+nohup
 
 # Gives the Process ID (PID) of a process
 pidof
@@ -1025,3 +1044,42 @@ sed
 
 rsync
 ```
+
+
+ln: Create links between files.
+wc: Count words, lines, and characters in a file
+pstree: Display a tree of processes.
+hostname: Print or set system name.
+
+screen: Terminal multiplexer with detach and reattach capabilities.
+tmux: Terminal multiplexer similar to screen.
+
+#### Text Editing and Manipulation:
+nano: Basic text editor.
+vim: Advanced text editor.
+emacs: Another powerful text editor.
+sed: Stream editor for filtering and transforming text.
+awk: Pattern scanning and text processing language.
+cut: Extract sections from each line of files.
+paste: Merge lines of files.
+sort: Sort lines of text files.
+uniq: Report or filter out repeated lines in a file.
+tr: Translate or delete characters.
+tee: Read from standard input and write to standard output and files simultaneously.
+
+
+#### File Transfer and Networking:
+scp: Securely copy files between hosts.
+rsync: Remote file synchronization utility.
+wget: Retrieve files from the web using HTTP, HTTPS, and FTP.
+curl: Transfer data with URLs.
+ssh-keygen: Generate SSH keys for secure authentication.
+ssh-copy-id: Copy SSH keys to a remote server's authorized_keys file.
+
+
+
+#### Miscellaneous:
+history: Display command history.
+alias: Create command aliases.
+watch: Execute a program periodically, showing output fullscreen.
+man: Display the manual pages for commands.

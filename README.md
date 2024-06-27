@@ -95,7 +95,7 @@
 # Linux VM in your own system
 
 
-#### [Ubuntu Server for ARM](https://ubuntu.com/download/server/arm)
+
 
 
 ### Command to start the wsl 2 from windows
@@ -109,7 +109,7 @@ ip add
 ```
 
 
-
+#### [Ubuntu Server for ARM](https://ubuntu.com/download/server/arm)
 ### Setup ubuntu server in UTM
 ```
 sudo apt update && sudo apt upgrade -y
@@ -122,7 +122,7 @@ sudo apt install spice-vdagent spice-webdavd -y
 # https://docs.getutm.app/guest-support/linux/
 sudo mkdir -p /media/shared
 sudo mount -t 9p -o trans=virtio share /media/shared -oversion=9p2000.L
-# You can also modify `/etc/fstab` and add the following line to automatically mount the share on startup
+# You can also modify `sudo vi /etc/fstab` and add the following line to automatically mount the share on startup
 share	/media/shared	9p	trans=virtio,version=9p2000.L,rw,_netdev,nofail	0	0
 sudo chown -R $USER /media/shared
 
